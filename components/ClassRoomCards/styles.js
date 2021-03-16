@@ -4,7 +4,10 @@ const styles=StyleSheet.create({
     container:{
         alignItems:'center',
         width:'90%',
-        flex:1
+        flex:1,
+        backgroundColor:'green',
+        height:100
+        
     },
     cardContainer:{
         height:100,
@@ -13,14 +16,12 @@ const styles=StyleSheet.create({
         borderRadius:10,
         backgroundColor:'#ffffff',
         borderColor:'#3FBD8D',
-        position:'absolute',
-        top:150
+        position:'absolute'
     },
     header:{
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'space-between',
-        alignContent:'center',
         borderRadius:10
     },
     headerText:{
@@ -34,8 +35,7 @@ const styles=StyleSheet.create({
         alignItems:'flex-start'
     },
     ContentText:{
-        fontSize:15,
-        fontWeight:'100'
+        fontSize:15
     }
 });
 

@@ -4,6 +4,9 @@ import {Icon} from 'react-native-elements';
 import styles from '../ClassroomScreen/styles';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import Cards from '../ClassRoomCards';
+import BottomSheet from '../bottomSheet';
+
+import { FlatList } from 'react-native-gesture-handler';
 
 
 const ClassroomScreen =(props) =>{
@@ -20,14 +23,14 @@ const ClassroomScreen =(props) =>{
             <Text>Sort By</Text>
             </Pressable>
         </View>
-        <Cards/>
-        <View style={styles.addButton}>
-            <Pressable style={styles.addClassroom}>
-            <AntIcon name='plus' size={20} color={'white'}/>
-            <Text style={styles.buttonText}>Add Classroom</Text>
-               
-            </Pressable>
+        <View style={{marginTop:150,flex:1}}>
+
+        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
+        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
+        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
+        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
         </View>
+        <BottomSheet/>
         </View>
     );
 
