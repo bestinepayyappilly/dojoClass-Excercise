@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         flex:1,
     },
     text:{
-        fontSize:25
+        fontSize:20
     }
 });
 

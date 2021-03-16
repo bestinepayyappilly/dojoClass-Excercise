@@ -2,8 +2,9 @@ import React from 'react';
 import {Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from './styles';
-import {Icon} from 'react-native-elements';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 import ClassroomScreen from '../ClassroomScreen';
+import { color } from 'react-native-reanimated';
 
 function PracticeScreen() {
   return (
@@ -32,28 +33,30 @@ function MyTabs() {
   return (
     <Tab.Navigator
     tabBarOptions={{
-      activeTintColor:'#00B2EE',
       inactiveTintColor:'#000000',
+      activeTintColor:'#6D9FDC',
+      
       labelStyle:{
-        fontSize:15
+        fontSize:12
       },
       style:{height:50}
     }}
     >
       <Tab.Screen  name="Practice" component={PracticeScreen} options={{
-        tabBarIcon:() =>(
-          <Icon name='book' size={30} />
-        )
+        tabBarIcon:({tintColor}) =>(
+          <AntIcon name='book' color={'#6D9FDC'} size={25} />
+        ),
+        tabBarOptions:{activeTintColor:'red'}
       }}/>
       <Tab.Screen name="Classroom" component={ClassScreen} options={{
-        tabBarIcon:() =>(
-          <Icon name='book' size={30}/>
+        tabBarIcon:({tintColor}) =>(
+          <AntIcon name='book' color={tintColor} size={25}/>
           )
       }} />
       <Tab.Screen name="Profile" component={ProfileScreen} 
       options={{
-        tabBarIcon:() =>(
-          <Icon name='person' size={30} />
+        tabBarIcon:({tintColor}) =>(
+          <AntIcon name='user' color={tintColor} size={25} />
           )
       }} />
     </Tab.Navigator>
