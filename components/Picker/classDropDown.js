@@ -36,7 +36,7 @@ return(
     >
     {
         classes.map((l)=> (
-            <Picker.Item label={l} value={l} />
+            <Picker.Item label={l} value={l} key={l} />
         ))
         
     }
