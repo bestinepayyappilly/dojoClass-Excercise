@@ -1,13 +1,14 @@
 import {StyleSheet} from 'react-native';
+import {Dimensions} from 'react-native';
+
 
 const styles=StyleSheet.create({
     container:{
-        width:380
-
-
-        
+        width:Dimensions.get('screen').width,
+        alignItems:'center'
     },
     cardContainer:{
+        width:'90%',
         height:100,
         borderLeftWidth:15,
         borderRadius:10,

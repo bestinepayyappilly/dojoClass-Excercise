@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Cards = (props) => {
 
-    const { standard,subject,studentsNumber} = props;
+    const { standard,subject,studentsNumber} = props.item;
 
 
     return(

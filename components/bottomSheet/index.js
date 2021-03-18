@@ -19,7 +19,8 @@ export default function BottomSheet() {
             </Pressable>
       <RBSheet
         ref={refRBSheet}
-        closeOnDragDown={false}
+        closeOnDragDown={true}
+        animationType={"slide"}
         closeOnPressMask={true}
         closeOnPressBack={true}
         customStyles={{

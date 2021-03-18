@@ -1,12 +1,11 @@
 import React from 'react';
-import {View,Text,Pressable} from 'react-native';
+import {FlatList,View,Text,Pressable} from 'react-native';
 import {Icon} from 'react-native-elements';
 import styles from '../ClassroomScreen/styles';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import Cards from '../ClassRoomCards';
+import classes from './classes';
 import BottomSheet from '../bottomSheet';
-
-import { FlatList } from 'react-native-gesture-handler';
 
 
 const ClassroomScreen =(props) =>{
@@ -23,12 +22,12 @@ const ClassroomScreen =(props) =>{
             <Text>Sort By</Text>
             </Pressable>
         </View>
-        <View style={{marginTop:150,flex:1}}>
-
-        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
-        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
-        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
-        <Cards standard={"9"} subject={"Maths"} studentsNumber={"15"}/>
+        <View style={{marginTop:150}}>
+        <FlatList
+        data={classes}
+        renderItem={({item})=><Cards item={item}/>}
+        />
+        
         </View>
         <BottomSheet/>
         </View>
