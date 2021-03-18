@@ -43,20 +43,20 @@ function MyTabs() {
     }}
     >
       <Tab.Screen  name="Practice" component={PracticeScreen} options={{
-        tabBarIcon:({tintColor}) =>(
-          <AntIcon name='book' color={'#6D9FDC'} size={25} />
+        tabBarIcon:({color}) =>(
+          <AntIcon name='book' color={color} size={25} />
         ),
         tabBarOptions:{activeTintColor:'red'}
       }}/>
       <Tab.Screen name="Classroom" component={ClassScreen} options={{
-        tabBarIcon:({tintColor}) =>(
-          <AntIcon name='book' color={tintColor} size={25}/>
+        tabBarIcon:({color}) =>(
+          <AntIcon name='book' color={color} size={25}/>
           )
       }} />
       <Tab.Screen name="Profile" component={ProfileScreen} 
       options={{
-        tabBarIcon:({tintColor}) =>(
-          <AntIcon name='user' color={tintColor} size={25} />
+        tabBarIcon:({color}) =>(
+          <AntIcon name='user' color={color} size={25} />
           )
       }} />
     </Tab.Navigator>

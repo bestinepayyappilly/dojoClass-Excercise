@@ -2,21 +2,17 @@ import {StyleSheet} from 'react-native';
 
 const styles=StyleSheet.create({
     container:{
-        alignItems:'center',
-        width:'90%',
-        flex:1,
-        backgroundColor:'green',
-        height:100
+        width:380
+
+
         
     },
     cardContainer:{
         height:100,
-        width:"100%",
         borderLeftWidth:15,
         borderRadius:10,
         backgroundColor:'#ffffff',
         borderColor:'#3FBD8D',
-        position:'absolute'
     },
     header:{
         alignItems:'center',
